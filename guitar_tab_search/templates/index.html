@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form>
+  <input type="text" name="song_title">
+  <input type="submit"  value="Search">
+</form>
+
+
+{% for link, song in tab_urls %}
+  <a href="{{ link }}">{{ song }}</a>
+  <br>
+{% endfor %}
+
+
+{% endblock %}
