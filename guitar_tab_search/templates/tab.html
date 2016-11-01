@@ -2,8 +2,18 @@
 
 {% block content %}
 
+
+
+<nav class="navbar navbar-default">
+<div class="container">
+  <a href="{% url 'index_view' %}" role="button" class="btn btn-default navbar-btn">Go Back</a>
+</div>
+</nav>
+
+<div class="container">
   {% autoescape off %}
     {{ tabs }}
   {% endautoescape %}
+</div>
 
 {% endblock %}

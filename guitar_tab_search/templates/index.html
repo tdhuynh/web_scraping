@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<nav class="navbar navbar-default">
+  <form class="navbar-form navbar-left" role="search">
+    <input type="text" name="song_title" class="form-control" placeholder="Search By Song">
+    <input type="submit" class="btn btn-default" value="Search">
+  </form>
+</nav>
 
-<form>
-  <input type="text" name="song_title">
-  <input type="submit"  value="Search">
-</form>
-
-
-{% for link, song in tab_urls %}
-  <a href="{{ link }}">{{ song }}</a>
-  <br>
-{% endfor %}
-
-
+<div class="container">
+<div class="row">
+    {% for link, song in tab_urls %}
+      <div class="col-md-6">
+        <a href="{{ link }}">{{ song }}</a>
+      </div>
+    {% endfor %}
+</div>
+</div>
 {% endblock %}
