@@ -6,14 +6,21 @@
     <input type="text" name="song_title" class="form-control" placeholder="Search By Song">
     <input type="submit" class="btn btn-default" value="Search">
   </form>
+
 </nav>
 
 <div class="container">
 <div class="row">
     {% for link, song in tab_urls %}
       <div class="col-md-6">
-        <a href="{{ link }}">{{ song }}</a>
-      </div>
+        <div class="panel panel-default">
+          <a href="{{ link }}">
+          <div class="panel-body">
+            {{ song }}
+          </div>
+          </a>
+          </div>
+        </div>
     {% endfor %}
 </div>
 </div>
